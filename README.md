@@ -56,4 +56,5 @@ Check `packages.json` for details
 - [ ] Dark/Light Mode
 
 <br/>
+deeptimaan krishna jadaun
 Thank You ☺
