@@ -29,7 +29,7 @@ https://the-weather-forecasting.netlify.app
 - Clone the repository:
 
 ```bash
-git clone https://github.com/deeptimaan-k/weatherapp.git
+git 
 
 ```
 
@@ -56,5 +56,5 @@ Check `packages.json` for details
 - [ ] Dark/Light Mode
 
 <br/>
-deeptimaan krishna jadaun
+by deeptimaan krishna jadaun
 Thank You ☺
