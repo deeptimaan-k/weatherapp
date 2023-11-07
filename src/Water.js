@@ -5,6 +5,7 @@ import UTCDatetime from './components/Reusable/UTCDatetime';
 import Logo from './assets/logo.png';
 import Drop from './assets/drop.png';
 import "./style.css";
+import videoBackground from './assets/water_background.mp4';
 
 export const Water = () => {
   const [groundwater, setGroundwater] = useState(null);
@@ -15,6 +16,22 @@ export const Water = () => {
   };
 
   return (
+    <>
+    <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          opacity: 0.6,
+          objectFit: 'cover',
+          zIndex: -1, // Set a negative z-index to ensure the video is in the background
+        }}
+      >
+        <source src={videoBackground} type="video/mp4" />
+      </video>
     <Container
       sx={{
         maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
@@ -104,6 +121,7 @@ export const Water = () => {
         </Grid>
       </Grid>
     </Container>
+    </>
   );
 };
 

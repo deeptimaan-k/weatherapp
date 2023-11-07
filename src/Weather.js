@@ -11,6 +11,7 @@ import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/logo.png';
 import ErrorBox from './components/Reusable/ErrorBox';
 import { ALL_DESCRIPTIONS } from './utilities/DateConstants';
+import videoBackground from './assets/weather_background.mp4';
 import {
   getTodayForecastWeather,
   getWeekForecastWeather,
@@ -59,6 +60,7 @@ function Weather() {
   };
 
   let appContent = (
+
     <Box
       xs={12}
       display="flex"
@@ -149,6 +151,22 @@ function Weather() {
   }
 
   return (
+    <>
+    <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          opacity: 0.3,
+          objectFit: 'cover',
+          zIndex: -1, // Set a negative z-index to ensure the video is in the background
+        }}
+      >
+        <source src={videoBackground} type="video/mp4" />
+      </video>
     <Container
       sx={{
         maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
@@ -195,6 +213,7 @@ function Weather() {
         {appContent}
       </Grid>
     </Container>
+    </>
   );
 }
 
