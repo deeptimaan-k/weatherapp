@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ResponsiveAppBar from './NavBar';
 import Weather from './Weather';
 import Water from './Water';
-import FeedBack from './Feedback';
+import Askme from './ChatGpt';
 import ECommerce from './ECommerce';
+import Feedback from './Feedback';
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
           <Route path="" element={<Weather />} /> {/* Set the Weather page as default */}
           <Route path="/weather" element={<Weather />} />
           <Route path="/water" element={<Water />} />
-          <Route path="/feedback" element={<FeedBack />} />
+          <Route path="/askme" element={<Askme />} />
           <Route path="/ecommerce" element={<ECommerce />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </div>
     </Router>
   );
 }
+
 export default App;

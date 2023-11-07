@@ -10,7 +10,7 @@ const AirConditionsItem = (props) => {
 
   if (props.type === 'temperature')
     iconContent = <ThermostatIcon sx={{ fontSize: '18px' }} />;
-  else if (props.type === 'wind')
+  else if (props.type === 'wind' || props.type === 'AQI' )
     iconContent = <AirIcon sx={{ fontSize: '18px' }} />;
   else if (props.type === 'clouds')
     iconContent = <FilterDramaIcon sx={{ fontSize: '18px' }} />;
