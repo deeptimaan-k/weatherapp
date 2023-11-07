@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container} from '@mui/material';
 import './feedback.css';
+import videoBackground from './assets/common_background.mp4';
 const feedData = [
   {
     username: 'Radiant',
@@ -88,6 +89,7 @@ const feedData = [
 
 const FeedCard = ({ data }) => {
   return (
+    <>
     <div className="tweet-wrap">
       <div className="tweet-header">
         <img src={data.profilepic} alt="" className="avator" />
@@ -131,12 +133,27 @@ const FeedCard = ({ data }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
 const Feed = () => {
   return (
     <div>
+     <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'fixed',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+        }}
+      >
+        <source src={videoBackground} type="video/mp4" />
+      </video>
        <Container
       sx={{
         maxWidth: { xs: '95%', sm: '80%', md: '1100px' },

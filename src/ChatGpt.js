@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import videoBackground from './assets/common_background.mp4';
 
 function App() {
   const [question, setQuestion] = useState('');
@@ -33,6 +34,22 @@ function App() {
   }, []);
 
   return (
+    <>
+    <video
+    autoPlay
+    loop
+    muted
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      opacity: 0.6,
+      objectFit: 'cover',
+      zIndex: -1, // Set a negative z-index to ensure the video is in the background
+    }}
+  >
+    <source src={videoBackground} type="video/mp4" />
+  </video>
     <Container
       sx={{
         maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
@@ -78,6 +95,7 @@ function App() {
         </div>
       </div>
     </Container>
+    </>
   );
 }
 
