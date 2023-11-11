@@ -6,6 +6,7 @@ import Water from './Water';
 import Askme from './ChatGpt';
 import ECommerce from './ECommerce';
 import Feedback from './Feedback';
+import WQICal from './WaterqualityCalculator';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/askme" element={<Askme />} />
           <Route path="/ecommerce" element={<ECommerce />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/wqi calculator" element={<WQICal />} />
         </Routes>
       </div>
     </Router>
